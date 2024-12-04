@@ -1,0 +1,9 @@
+The following code demonstrates a solution that handles potential negative values by using the `max()` function:
+
+```css
+.container {
+  width: max(0, calc(50% - 10px));
+}
+```
+
+This ensures that the width is never negative.  Furthermore, you should ensure that the parent element's width is properly defined and not itself subject to unpredictable calculations.  Avoid nested `calc()` functions that might lead to complex dependency issues.  If possible, prefer using fixed values or more reliable methods for setting element widths where appropriate.
