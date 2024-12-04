@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates an uncommon error involving the use of the `calc()` function and percentage values:
+
+```css
+.container {
+  width: calc(50% - 10px);
+}
+```
+
+This code intends to create a container element whose width is 50% of its parent's width, minus 10 pixels.  However, this can lead to unexpected results if the parent element's width is not explicitly defined or is itself calculated in a way that might not work properly with `calc()`.
+
+Specifically, if the parent element's width is dynamic and is too small, the `calc()` function might return a negative value for the width, which is not valid.
+
+Another issue can occur if the percentage value in `calc()` is dependent on a value that's not yet rendered, leading to inaccurate calculations.
